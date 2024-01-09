@@ -740,6 +740,7 @@ gen_etc_netplan_01_netcfg_yaml_entry() {
 
 # setup /etc/netplan/01-netcfg.yaml
 setup_etc_netplan_01_netcfg_yaml() {
+  umask 7177
   debug '# setting up /etc/netplan/01-netcfg.yaml'
   local netplan_configuration_file="$FOLD/hdd/etc/netplan/01-netcfg.yaml"
   {
